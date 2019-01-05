@@ -11,6 +11,21 @@
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
+                        <div class="form-group">
+                            <label for="name" class="col-md-4 control-label">I am a </label>
+
+                            <div class="col-md-6">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary active">
+                                        <input type="radio" name="role" autocomplete="off" value="subscriber"> Subscriber
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                        <input type="radio" name="role" autocomplete="off" value="consultant"> Consultant
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Name</label>
 

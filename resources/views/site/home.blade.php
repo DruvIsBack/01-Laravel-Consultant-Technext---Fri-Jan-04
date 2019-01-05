@@ -1,117 +1,8 @@
-<!DOCTYPE html>
+@extends('layouts.site-template')
 
-<html dir="ltr" lang="en">
-<head>
-
-    <!-- Meta Tags -->
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="description" content="Counseling - Best Psychology & Counseling HTML5 Template"/>
-    <meta name="keywords" content="chiropractor, counseling, healthcare, psychiatrist, psychologist, psychology"/>
-    <meta name="author" content="ThemeMascot"/>
-
-    <!-- Page Title -->
-    <title>Looking for a therapist in New York? Let us help</title>
-
-    <!-- Favicon and Touch Icons -->
-    <link href="{{asset(images/favicon.png)}}" rel="shortcut icon" type="image/png">
-    <link href="{{asset(images/apple-touch-icon.png)}}" rel="apple-touch-icon">
-    <link href="{{asset(images/apple-touch-icon-72x72.png)}}" rel="apple-touch-icon" sizes="72x72">
-    <link href="{{asset(images/apple-touch-icon-114x114.png)}}" rel="apple-touch-icon" sizes="114x114">
-    <link href="{{asset(images/apple-touch-icon-144x144.png)}}" rel="apple-touch-icon" sizes="144x144">
-
-    <!-- Stylesheet -->
-    <link href="//fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link href="{{asset(css/bootstrap.min.css)}}" rel="stylesheet" type="text/css">
-    <link href="{{asset(css/jquery-ui.min.css)}}" rel="stylesheet" type="text/css">
-    <link href="{{asset(css/owl.carousel.min.css)}}" rel="stylesheet" type="text/css">
-    <link href="{{asset(css/animate.css)}}" rel="stylesheet" type="text/css">
-    <link href="{{asset(css/css-plugin-collections.css)}}" rel="stylesheet"/>
-    <!-- CSS | menuzord megamenu skins -->
-    <link id="menuzord-menu-skins" href="{{asset(css/menuzord-skins/menuzord-rounded-boxed.css)}}" rel="stylesheet"/>
-    <!-- CSS | Main style file -->
-    <link href="{{asset(css/style-main.css)}}" rel="stylesheet" type="text/css">
-    <!-- CSS | Preloader Styles -->
-    <link href="{{asset(css/preloader.css)}}" rel="stylesheet" type="text/css">
-    <!-- CSS | Custom Margin Padding Collection -->
-    <link href="{{asset(css/custom-bootstrap-margin-padding.css)}}" rel="stylesheet" type="text/css">
-    <!-- CSS | Responsive media queries -->
-    <link href="{{asset(css/responsive.css)}}" rel="stylesheet" type="text/css">
-    <!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
-    <!-- <link href="{{asset(css/style.css)}}" rel="stylesheet" type="text/css"> -->
-
-    <!-- CSS | Theme Color -->
-    <link href="{{asset(css/colors/theme-skin-green.css)}}" rel="stylesheet" type="text/css">
-
-    <!-- external javascripts -->
-    <script src="{{asset(js/jquery-2.2.4.min.js)}}"></script>
-    <script src="{{asset(js/jquery-ui.min.js)}}"></script>
-    <script src="{{asset(js/bootstrap.min.js)}}"></script>
-    <!-- JS | jquery plugin collection for this theme -->
-    <script src="{{asset(js/jquery-plugin-collection.js)}}"></script>
-
-</head>
-<body class="">
-<div id="wrapper" class="clearfix">
-    <!-- preloader -->
-    <!--<div id="preloader">
-      <div id="spinner">
-        <img class="floating ml-5 mb-5" src="images/preloaders/13.png)}}" alt="">
-        <h5 class="line-height-50 font-18">Loading...</h5>
-      </div>
-      <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
-    </div>-->
-
-    <!-- Header -->
-    <header id="header" class="header">
-        <div class="header-nav navbar-fixed-top header-dark navbar-white navbar-transparent bg-transparent-1 navbar-sticky-animated animated-active">
-            <div class="header-nav-wrapper">
-                <div class="container">
-                    <nav id="menuzord-right" class="menuzord default no-bg">
-                        <a class="menuzord-brand pull-left flip" href="#">
-                            <!--<img src="images/logo-wide.png" alt="">-->
-                            <h2>
-                                LOGO
-                            </h2>
-                        </a>
-                        <ul class="menuzord-menu">
-                            <li class="active">
-                                <a href="#">Find Therapist</a>
-                                <ul class="dropdown">
-                                    <li>
-                                        <a href="#">Questionnaire</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Matches</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Favorites</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Insurance</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">Benefits</a></li>
-                                    <li><a href="#">Reimbursements</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Login
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Start main-content -->
-    <div class="main-content">
+@section('body-content')
         <!-- Section: home -->
-        <section id="home" class="divider parallax fullscreen" data-parallax-ratio="0.1" data-bg-img="{{asset(images/bg9.jpg)}}">
+        <section id="home" class="divider parallax fullscreen" data-parallax-ratio="0.1" data-bg-img="site/images/bg9.jpg">
             <div class="display-table">
                 <div class="display-table-cell">
                     <div class="container pt-150 pb-150">
@@ -135,8 +26,7 @@
         </section>
 
         <!-- Section: welcome -->
-        <section id="welcome" class="divider layer-overlay overlay-dark-6 parallax" data-parallax-ratio="0.1"
-                 data-bg-img="{{asset(images/bg/bg5.jpg)}}">
+        <section id="welcome" class="divider layer-overlay overlay-dark-6 parallax" data-parallax-ratio="0.1" data-bg-img="site/images/bg/bg5.jpg">
             <div class="container pt-150 pb-150">
                 <div class="section-content">
                     <div class="row">
@@ -158,18 +48,18 @@
                         <div class="col-md-6">
                             <div class="row mb-10">
                                 <div class="col-sm-6 col-md-6 pr-5 pr-sm-15 mb-sm-10">
-                                    <img class="img-fullwidth" src="{{asset(images/about/ab1.jpg)}}" alt="">
+                                    <img class="img-fullwidth" src="site/images/about/ab1.jpg" alt="">
                                 </div>
                                 <div class="col-sm-6 col-md-6 pl-5 pl-sm-15">
-                                    <img class="img-fullwidth" src="{{asset(images/about/ab2.jpg)}}" alt="">
+                                    <img class="img-fullwidth" src="site/images/about/ab2.jpg" alt="">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6 col-md-6 pr-5 pr-sm-15 mb-sm-10">
-                                    <img class="img-fullwidth" src="{{asset(images/about/ab3.jpg)}}" alt="">
+                                    <img class="img-fullwidth" src="site/images/about/ab3.jpg" alt="">
                                 </div>
                                 <div class="col-sm-6 col-md-6 pl-5 pl-sm-15">
-                                    <img class="img-fullwidth" src="{{asset(images/about/ab4.jpg)}}" alt="">
+                                    <img class="img-fullwidth" src="site/images/about/ab4.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -180,7 +70,7 @@
 
         <!-- Section: Services -->
         <section id="services" class="divider parallax layer-overlay overlay-dark-6" data-parallax-ratio="0.1"
-                 data-bg-img="{{asset(images/bg/bg4.jpg)}}">
+                 data-bg-img="site/images/bg/bg4.jpg">
             <div class="container pt-150 pb-150">
                 <div class="section-title text-center">
                     <div class="row">
@@ -198,7 +88,7 @@
                                 <div class="item">
                                     <div class="campaign bg-silver-light maxwidth500 mb-30">
                                         <div class="thumb">
-                                            <img src="{{asset(images/services/1.jpg)}}" alt="" class="img-fullwidth">
+                                            <img src="site/images/services/1.jpg" alt="" class="img-fullwidth">
                                             <div class="campaign-overlay"></div>
                                         </div>
                                         <div class="campaign-details clearfix p-15">
@@ -215,7 +105,7 @@
                                 <div class="item">
                                     <div class="campaign bg-silver-light maxwidth500 mb-30">
                                         <div class="thumb">
-                                            <img src="{{asset(images/services/2.jpg)}}" alt="" class="img-fullwidth">
+                                            <img src="site/images/services/2.jpg" alt="" class="img-fullwidth">
                                             <div class="campaign-overlay"></div>
                                         </div>
                                         <div class="campaign-details clearfix p-15">
@@ -232,7 +122,7 @@
                                 <div class="item">
                                     <div class="campaign bg-silver-light maxwidth500 mb-30">
                                         <div class="thumb">
-                                            <img src="{{asset(images/services/3.jpg)}}" alt="" class="img-fullwidth">
+                                            <img src="site/images/services/3.jpg" alt="" class="img-fullwidth">
                                             <div class="campaign-overlay"></div>
                                         </div>
                                         <div class="campaign-details clearfix p-15">
@@ -249,7 +139,7 @@
                                 <div class="item">
                                     <div class="campaign bg-silver-light maxwidth500 mb-30">
                                         <div class="thumb">
-                                            <img src="{{asset(images/services/4.jpg)}}" alt="" class="img-fullwidth">
+                                            <img src="site/images/services/4.jpg" alt="" class="img-fullwidth">
                                             <div class="campaign-overlay"></div>
                                         </div>
                                         <div class="campaign-details clearfix p-15">
@@ -266,7 +156,7 @@
                                 <div class="item">
                                     <div class="campaign bg-silver-light maxwidth500 mb-30">
                                         <div class="thumb">
-                                            <img src="{{asset(images/services/5.jpg)}}" alt="" class="img-fullwidth">
+                                            <img src="site/images/services/5.jpg" alt="" class="img-fullwidth">
                                             <div class="campaign-overlay"></div>
                                         </div>
                                         <div class="campaign-details clearfix p-15">
@@ -286,6 +176,7 @@
                 </div>
             </div>
         </section>
+
 
         <style>
             section#testimonial {
@@ -422,7 +313,7 @@
             }
         </style>
         <!-- Section: Testimonial -->
-        <section id="testimonial" class="divider parallax" data-parallax-ratio="0.1" data-bg-img="{{asset(image/custom/testimonial.jpg)}}">
+        <section id="testimonial" class="divider parallax" data-parallax-ratio="0.1" data-bg-img="site/images/custom/testimonial.jpg">
             <div class="container pt-150 pb-150">
                 <div class="heading">
                     <h3>What Our Patients Say</h3>
@@ -435,42 +326,42 @@
                         <div class="ser_inner-2 owl-carousel owl-theme">
                             <div class="item">
                                 <div class="testi_d">
-                                    <a href="#"><img src="{{asset(image/custom/user.jpg)}}" alt=""></a>
+                                    <a href="#"><img src="site/images/custom/user.jpg" alt=""></a>
                                     <p>Dolor sitam consectetur sed adipisicing eiusmod tempor cididunt
                                         laboret mag magn aliquat enim sed minim veniam nostrud lorem ipsum
                                         dolor.</p>
                                     <h4>David Murry <span>Patient</span></h4>
-                                    <cite><img src="{{asset(image/quotes.png)}}" alt=""></cite>
+                                    <cite><img src="site/images/quotes.png" alt=""></cite>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="testi_d">
-                                    <a href="#"><img src="{{asset(image/custom/user.jpg)}}" alt=""></a>
+                                    <a href="#"><img src="site/images/custom/user.jpg" alt=""></a>
                                     <p>Dolor sitam consectetur sed adipisicing eiusmod tempor cididunt
                                         laboret mag magn aliquat enim sed minim veniam nostrud lorem ipsum
                                         dolor.</p>
                                     <h4>David Murry <span>Patient</span></h4>
-                                    <cite><img src="{{asset(image/quotes.png)}}" alt=""></cite>
+                                    <cite><img src="site/images/quotes.png" alt=""></cite>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="testi_d">
-                                    <a href="#"><img src="{{asset(image/custom/user.jpg)}}" alt=""></a>
+                                    <a href="#"><img src="site/images/custom/user.jpg" alt=""></a>
                                     <p>Dolor sitam consectetur sed adipisicing eiusmod tempor cididunt
                                         laboret mag magn aliquat enim sed minim veniam nostrud lorem ipsum
                                         dolor.</p>
                                     <h4>David Murry <span>Patient</span></h4>
-                                    <cite><img src="{{asset(image/quotes.png)}}" alt=""></cite>
+                                    <cite><img src="site/images/quotes.png" alt=""></cite>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="testi_d">
-                                    <a href="#"><img src="//localhost:9999/image/custom/user.jpg" alt=""></a>
+                                    <a href="#"><img src="site/images/custom/user.jpg" alt=""></a>
                                     <p>Dolor sitam consectetur sed adipisicing eiusmod tempor cididunt
                                         laboret mag magn aliquat enim sed minim veniam nostrud lorem ipsum
                                         dolor.</p>
                                     <h4>David Murry <span>Patient</span></h4>
-                                    <cite><img src="{{asset(//localhost:9999/image/quotes.png" alt=""></cite>
+                                    <cite><img src="site/images/quotes.png" alt=""></cite>
                                 </div>
                             </div>
                         </div>
@@ -479,10 +370,9 @@
             </div>
         </section>
 
-
         <!-- Section: Experts -->
         <section id="experts" class="divider parallax layer-overlay overlay-dark-4" data-parallax-ratio="0.1"
-                 data-bg-img="images/bg/bg5.jpg">
+                 data-bg-img="site/images/bg/bg5.jpg">
             <div class="container pt-150 pb-150">
                 <div class="section-title text-center">
                     <div class="row">
@@ -497,7 +387,7 @@
                     <div class="item">
                         <div class="team-members maxwidth400">
                             <div class="team-thumb">
-                                <img class="img-fullwidth" alt="" src="{{asset(images/team/sm-1.jpg)}}">
+                                <img class="img-fullwidth" alt="" src="site/images/team/sm-1.jpg">
                             </div>
                             <div class="team-bottom-part bg-lighter border-1px text-center p-10 pt-20 pb-10">
                                 <h4 class="text-uppercase font-raleway font-weight-600 m-0"><a
@@ -515,7 +405,7 @@
                     <div class="item">
                         <div class="team-members maxwidth400">
                             <div class="team-thumb">
-                                <img class="img-fullwidth" alt="" src="{{asset(images/team/sm-2.jpg)}}">
+                                <img class="img-fullwidth" alt="" src="site/images/team/sm-2.jpg">
                             </div>
                             <div class="team-bottom-part bg-lighter border-1px text-center p-10 pt-20 pb-10">
                                 <h4 class="text-uppercase font-raleway font-weight-600 m-0"><a
@@ -533,7 +423,7 @@
                     <div class="item">
                         <div class="team-members maxwidth400">
                             <div class="team-thumb">
-                                <img class="img-fullwidth" alt="" src="{{asset(/team/sm-3.jpg)}}">
+                                <img class="img-fullwidth" alt="" src="site/images/team/sm-3.jpg">
                             </div>
                             <div class="team-bottom-part bg-lighter border-1px text-center p-10 pt-20 pb-10">
                                 <h4 class="text-uppercase font-raleway font-weight-600 m-0"><a
@@ -551,7 +441,7 @@
                     <div class="item">
                         <div class="team-members maxwidth400">
                             <div class="team-thumb">
-                                <img class="img-fullwidth" alt="" src="{{asset(images/team/sm-4.jpg)}}">
+                                <img class="img-fullwidth" alt="" src="site/images/team/sm-4.jpg">
                             </div>
                             <div class="team-bottom-part bg-lighter border-1px text-center p-10 pt-20 pb-10">
                                 <h4 class="text-uppercase font-raleway font-weight-600 m-0"><a
@@ -572,7 +462,7 @@
 
         <!-- Section: blog -->
         <section id="blog" class="divider parallax layer-overlay overlay-dark-6" data-parallax-ratio="0.1"
-                 data-bg-img="images/bg/bg1.jpg">
+                 data-bg-img="site/images/bg/bg1.jpg">
             <div class="container pt-150 pb-150">
                 <div class="section-title text-center">
                     <div class="row">
@@ -589,7 +479,7 @@
                             <article class="post clearfix mb-sm-30 bg-silver-light">
                                 <div class="entry-header">
                                     <div class="post-thumb thumb">
-                                        <img src="{{asset(images/blog/1.jpg)}}" alt="" class="img-responsive img-fullwidth">
+                                        <img src="site/images/blog/1.jpg" alt="" class="img-responsive img-fullwidth">
                                     </div>
                                 </div>
                                 <div class="entry-content p-20 pr-10">
@@ -625,7 +515,7 @@
                             <article class="post clearfix mb-sm-30 bg-silver-light">
                                 <div class="entry-header">
                                     <div class="post-thumb thumb">
-                                        <img src="{{asset(images/blog/2.jpg)}}" alt="" class="img-responsive img-fullwidth">
+                                        <img src="site/images/blog/2.jpg" alt="" class="img-responsive img-fullwidth">
                                     </div>
                                 </div>
                                 <div class="entry-content p-20 pr-10">
@@ -661,7 +551,7 @@
                             <article class="post clearfix mb-sm-30 bg-silver-light">
                                 <div class="entry-header">
                                     <div class="post-thumb thumb">
-                                        <img src="{{asset(images/blog/3.jpg)}}" alt="" class="img-responsive img-fullwidth">
+                                        <img src="site/images/blog/3.jpg" alt="" class="img-responsive img-fullwidth">
                                     </div>
                                 </div>
                                 <div class="entry-content p-20 pr-10">
@@ -697,166 +587,12 @@
                 </div>
             </div>
         </section>
-    </div>
-    <!-- end main-content -->
+@endsection
 
-    <!-- Footer -->
-    <footer id="footer" class="footer" data-bg-img="{{asset(images/footer-bg.png)}}" data-bg-color="#25272e">
-        <div class="container pt-70 pb-40">
-            <div class="row border-bottom-black">
-                <div class="col-sm-6 col-md-3">
-                    <div class="widget dark">
-                        <h2 style="color:white">
-                            LOGO
-                        </h2>
-                        <p>Your Office Address</p>
-                        <ul class="list-inline mt-5">
-                            <li class="m-0 pl-10 pr-10"><i class="fa fa-phone text-theme-colored mr-5"></i> <a
-                                    class="text-gray" href="#">+xxx-xxx-xxxx</a></li>
-                            <li class="m-0 pl-10 pr-10"><i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a
-                                    class="text-gray" href="#">contact@yourdomain.com</a></li>
-                            <li class="m-0 pl-10 pr-10"><i class="fa fa-globe text-theme-colored mr-5"></i> <a
-                                    class="text-gray" href="#">www.yourdomain.com</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="widget dark">
-                        <h5 class="widget-title line-bottom">Latest News</h5>
-                        <div class="latest-posts">
-                            <article class="post media-post clearfix pb-0 mb-10">
-                                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>
-                                <div class="post-right">
-                                    <h5 class="post-title mt-0 mb-5"><a href="#">Sustainable Construction</a></h5>
-                                    <p class="post-date mb-0 font-12">Mar 08, 2015</p>
-                                </div>
-                            </article>
-                            <article class="post media-post clearfix pb-0 mb-10">
-                                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>
-                                <div class="post-right">
-                                    <h5 class="post-title mt-0 mb-5"><a href="#">Industrial Coatings</a></h5>
-                                    <p class="post-date mb-0 font-12">Mar 08, 2015</p>
-                                </div>
-                            </article>
-                            <article class="post media-post clearfix pb-0 mb-10">
-                                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>
-                                <div class="post-right">
-                                    <h5 class="post-title mt-0 mb-5"><a href="#">Storefront Installations</a></h5>
-                                    <p class="post-date mb-0 font-12">Mar 08, 2015</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="widget dark">
-                        <h5 class="widget-title line-bottom">Useful Links</h5>
-                        <ul class="list angle-double-right list-border">
-                            <li><a href="#">Questionnaire</a></li>
-                            <li><a href="#">Matches</a></li>
-                            <li><a href="#">Favorites</a></li>
-                            <li><a href="#">Benefits</a></li>
-                            <li><a href="#">Reimbursements</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="widget dark">
-                        <h5 class="widget-title line-bottom">Opening Hours</h5>
-                        <div class="opening-hours">
-                            <ul class="list-border">
-                                <li class="clearfix"><span> Mon - Tues :  </span>
-                                    <div class="value pull-right"> 6.00 am - 10.00 pm</div>
-                                </li>
-                                <li class="clearfix"><span> Wednes - Thurs :</span>
-                                    <div class="value pull-right"> 8.00 am - 6.00 pm</div>
-                                </li>
-                                <li class="clearfix"><span> Fri : </span>
-                                    <div class="value pull-right"> 3.00 pm - 8.00 pm</div>
-                                </li>
-                                <li class="clearfix"><span> Sun : </span>
-                                    <div class="value pull-right"> Colosed</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-10">
-                <div class="col-md-5">
-                    <div class="widget dark">
-                        <h5 class="widget-title mb-10">Subscribe Us</h5>
-                        <!-- Mailchimp Subscription Form Starts Here -->
-                        <form id="mailchimp-subscription-form-footer" class="newsletter-form">
-                            <div class="input-group">
-                                <input type="email" value="" name="EMAIL" placeholder="Your Email"
-                                       class="form-control input-lg font-16" data-height="45px" id="mce-EMAIL-footer"
-                                       style="height: 45px;">
-                                <span class="input-group-btn">
-                  <button data-height="45px" class="btn btn-colored btn-theme-colored btn-xs m-0 font-14" type="submit">Subscribe</button>
-                </span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-3 col-md-offset-1">
-                    <div class="widget dark">
-                        <h5 class="widget-title mb-10">Call Us Now</h5>
-                        <div class="text-gray">
-                            +xxx-xxx-xxxx <br>
-                            +xxx-xxx-xxxx
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="widget dark">
-                        <h5 class="widget-title mb-10">Connect With Us</h5>
-                        <ul class="styled-icons icon-dark icon-theme-colored icon-circled icon-sm">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom bg-black-333">
-            <div class="container pt-15 pb-10">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p class="font-11 text-black-777 m-0">Copyright &copy;2018 iWebNext. All Rights Reserved</p>
-                    </div>
-                    <div class="col-md-6 text-right">
-                        <div class="widget no-border m-0">
-                            <ul class="list-inline sm-text-center mt-5 font-12">
-                                <li>
-                                    <a href="#">FAQ</a>
-                                </li>
-                                <li>|</li>
-                                <li>
-                                    <a href="#">Help Desk</a>
-                                </li>
-                                <li>|</li>
-                                <li>
-                                    <a href="#">Support</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
-</div>
-<!-- end wrapper -->
-
+@section('extra_scripts')
 <!-- Footer Scripts -->
 <!-- JS | Custom script for all pages -->
-<script src="{{asset(js/custom.js)}}"></script>
+<script src="site/js/custom.js"></script>
 <script>
     $(".ser_inner-2").owlCarousel({
         margin:30,
@@ -891,5 +627,4 @@
 
     });
 </script>
-</body>
-</html>
+@endsection

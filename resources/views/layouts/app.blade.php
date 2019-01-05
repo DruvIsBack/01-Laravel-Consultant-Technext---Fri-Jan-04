@@ -1,80 +1,56 @@
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.site-template')
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
+@section('body-content')
+    <section id="home" class="divider parallax fullscreen" data-parallax-ratio="0.1" data-bg-img="{{asset('site/images/bg9.jpg')}}">
+        <div class="display-table">
+            <div class="display-table-cell">
+                <div class="container pt-150 pb-150">
+                    <div class="row">
+                        @yield('content')
+                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </section>
+@endsection
 
-        @yield('content')
-    </div>
+@section('extra_scripts')
+<!-- Footer Scripts -->
+<!-- JS | Custom script for all pages -->
+<script src="site/js/custom.js"></script>
+<script>
+    $(".ser_inner-2").owlCarousel({
+        margin:30,
+        "items": 3,
+        "nav":false,
+        "navigationText": [""],
+        "itemsDesktop": [1199, 2],
+        "itemsDesktopSmall": [980, 2],
+        "itemsTablet": [768, 2],
+        "itemsMobile": [479, 1],
+        "pagination": true,
+        "autoHeight": false,
+        "autoplay": false,
+        "autoplayTimeout":3000,
+        "loop":true,
+        "dots": false,
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-</body>
-</html>
+        "responsive":{
+            "0":{
+                "items":1
+            },
+            "480":{
+                "items":2
+            },
+            "768":{
+                "items":2
+            },
+            "1200":{
+                "items":3
+            }
+        },
+
+    });
+</script>
+@endsection
+

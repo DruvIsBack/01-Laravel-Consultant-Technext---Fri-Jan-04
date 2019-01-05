@@ -2,8 +2,10 @@
 
 namespace consultant\Http\Controllers\Auth;
 
-use consultant\User;
 use consultant\Http\Controllers\Controller;
+use consultant\Roles;
+use consultant\User;
+use consultant\users_roles;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -27,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -60,12 +62,36 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \consultant\User
      */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+    protected function create(array $data){
+
+        $total_users = User::count();
+        if($total_users < 1) {
+
+            $new_user = User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+            ]);
+
+            users_roles::create([
+                'role' => 'admin',
+                'uid' => $new_user->id
+            ]);
+
+            return $new_user;
+        }else{
+            $new_user = User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+            ]);
+
+            users_roles::create([
+                'role' => 'subscriber',
+                'uid' => $new_user->id
+            ]);
+
+            return $new_user;
+        }
     }
 }
